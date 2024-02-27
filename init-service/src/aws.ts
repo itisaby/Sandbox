@@ -13,7 +13,7 @@ export async function copyS3Folder(sourcePrefix: string, destinationPrefix: stri
     try {
         // List all objects in the source folder
         const listParams = {
-            Bucket: process.env.S3_BUCKET ?? "",
+            Bucket: process.env.S3_BUCKET ?? "upraisedsandbox",
             Prefix: sourcePrefix,
             ContinuationToken: continuationToken
         };
@@ -26,10 +26,11 @@ export async function copyS3Folder(sourcePrefix: string, destinationPrefix: stri
         // We're doing it parallely here, using promise.all()
         await Promise.all(listedObjects.Contents.map(async (object) => {
             if (!object.Key) return;
+            console.log(object.Key)
             let destinationKey = object.Key.replace(sourcePrefix, destinationPrefix);
             let copyParams = {
-                Bucket: process.env.S3_BUCKET ?? "",
-                CopySource: `${process.env.S3_BUCKET}/${object.Key}`,
+                Bucket: process.env.S3_BUCKET ?? "upraisedsandbox",
+                CopySource: `upraisedsandbox/${object.Key}`,
                 Key: destinationKey
             };
 

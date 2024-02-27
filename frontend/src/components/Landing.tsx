@@ -76,8 +76,9 @@ export const Landing = () => {
           id="language"
           onChange={(e) => setLanguage(e.target.value)}
         >
-          <option value="node-js">Node.js</option>
+          <option value="node">Node.js</option>
           <option value="python">Python</option>
+          <option value="react">React</option>
         </StyledSelect>
         <StyledButton disabled={loading} onClick={async () => {
           setLoading(true);

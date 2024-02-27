@@ -1,0 +1,471 @@
+{
+    "Records": [
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "AWSService",
+                "invokedBy": "cloudtrail.amazonaws.com"
+            },
+            "eventTime": "2024-02-26T19:06:36Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketAcl",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "cloudtrail.amazonaws.com",
+            "userAgent": "cloudtrail.amazonaws.com",
+            "requestParameters": {
+                "bucketName": "upraised-images",
+                "Host": "upraised-images.s3.ap-south-1.amazonaws.com",
+                "acl": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "TcxTCU85OfF158tzCEE1ra5ihTiMarIls8Ggi9QPs56Ts1R2Wvrl8JDmOdLDbXy0/7+yZvtX0mmLbxzGNzj+zg==",
+                "bytesTransferredOut": 480
+            },
+            "requestID": "KZ25XCKKMG89CFX8",
+            "eventID": "d907bf8a-aca8-4219-b21e-7d25ca76afa6",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "432421738377",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::upraised-images"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "sharedEventID": "a877ecab-1258-4bd3-9413-fc0c611164ae",
+            "eventCategory": "Management"
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "AssumedRole",
+                "principalId": "AROAWJLSYC6E2LXCO7RLX:i-03a7ed28a3e3a4296",
+                "arn": "arn:aws:sts::432421738377:assumed-role/eksctl-upraised-cluster-nodegroup-NodeInstanceRole-YU8HU925LQJ5/i-03a7ed28a3e3a4296",
+                "accountId": "432421738377",
+                "accessKeyId": "ASIAWJLSYC6E3GQNQFA5",
+                "sessionContext": {
+                    "sessionIssuer": {
+                        "type": "Role",
+                        "principalId": "AROAWJLSYC6E2LXCO7RLX",
+                        "arn": "arn:aws:iam::432421738377:role/eksctl-upraised-cluster-nodegroup-NodeInstanceRole-YU8HU925LQJ5",
+                        "accountId": "432421738377",
+                        "userName": "eksctl-upraised-cluster-nodegroup-NodeInstanceRole-YU8HU925LQJ5"
+                    },
+                    "webIdFederationData": {},
+                    "attributes": {
+                        "creationDate": "2024-02-26T18:23:22Z",
+                        "mfaAuthenticated": "false"
+                    },
+                    "ec2RoleDelivery": "2.0"
+                }
+            },
+            "eventTime": "2024-02-26T19:07:57Z",
+            "eventSource": "ssm.amazonaws.com",
+            "eventName": "UpdateInstanceInformation",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "43.205.207.78",
+            "userAgent": "aws-sdk-go/1.41.4 (go1.18.3; linux; amd64) amazon-ssm-agent/",
+            "requestParameters": {
+                "instanceId": "i-03a7ed28a3e3a4296",
+                "agentVersion": "3.1.1732.0",
+                "agentStatus": "Active",
+                "platformType": "Linux",
+                "platformName": "Amazon Linux",
+                "platformVersion": "2",
+                "iPAddress": "192.168.35.67",
+                "computerName": "ip-192-168-35-67.ap-south-1.compute.internal",
+                "agentName": "amazon-ssm-agent"
+            },
+            "responseElements": null,
+            "requestID": "589515a9-df96-4275-a165-e49582423864",
+            "eventID": "0adab134-539e-477a-a9de-217b5a9baefb",
+            "readOnly": false,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.2",
+                "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+                "clientProvidedHostHeader": "ssm.ap-south-1.amazonaws.com"
+            }
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "AssumedRole",
+                "principalId": "AROAWJLSYC6E2LXCO7RLX:i-03a7ed28a3e3a4296",
+                "arn": "arn:aws:sts::432421738377:assumed-role/eksctl-upraised-cluster-nodegroup-NodeInstanceRole-YU8HU925LQJ5/i-03a7ed28a3e3a4296",
+                "accountId": "432421738377",
+                "accessKeyId": "ASIAWJLSYC6E4BQ26SV4",
+                "sessionContext": {
+                    "sessionIssuer": {
+                        "type": "Role",
+                        "principalId": "AROAWJLSYC6E2LXCO7RLX",
+                        "arn": "arn:aws:iam::432421738377:role/eksctl-upraised-cluster-nodegroup-NodeInstanceRole-YU8HU925LQJ5",
+                        "accountId": "432421738377",
+                        "userName": "eksctl-upraised-cluster-nodegroup-NodeInstanceRole-YU8HU925LQJ5"
+                    },
+                    "webIdFederationData": {},
+                    "attributes": {
+                        "creationDate": "2024-02-26T09:23:09Z",
+                        "mfaAuthenticated": "false"
+                    },
+                    "ec2RoleDelivery": "2.0"
+                },
+                "invokedBy": "AWS Internal"
+            },
+            "eventTime": "2024-02-26T19:10:03Z",
+            "eventSource": "ecr.amazonaws.com",
+            "eventName": "BatchGetImage",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "AWS Internal",
+            "userAgent": "AWS Internal",
+            "requestParameters": {
+                "registryId": "432421738377",
+                "repositoryName": "infra/dev/recruiter",
+                "imageIds": [
+                    {
+                        "imageTag": "d578f75ed3508ac0a78d42021c374af58f512ee8"
+                    }
+                ],
+                "acceptedMediaTypes": [
+                    "application/vnd.docker.distribution.manifest.v2+json",
+                    "application/vnd.docker.distribution.manifest.list.v2+json",
+                    "application/vnd.oci.image.manifest.v1+json",
+                    "application/vnd.oci.image.index.v1+json",
+                    "*/*"
+                ]
+            },
+            "responseElements": null,
+            "requestID": "3d7dab07-98d0-4174-a898-d89ae9a8b475",
+            "eventID": "62e7d523-58c7-45d4-9fe2-a2b3683077bd",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "432421738377",
+                    "ARN": "arn:aws:ecr:ap-south-1:432421738377:repository/infra/dev/recruiter"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "eventCategory": "Management"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "AWSService",
+                "invokedBy": "cloudtrail.amazonaws.com"
+            },
+            "eventTime": "2024-02-26T19:10:40Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketAcl",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "cloudtrail.amazonaws.com",
+            "userAgent": "cloudtrail.amazonaws.com",
+            "requestParameters": {
+                "bucketName": "upraised-images",
+                "Host": "upraised-images.s3.ap-south-1.amazonaws.com",
+                "acl": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "nZ6y4Z8mOGUza+w1niY9vuaqmNIKPVzSv2GioyeTEPgmqgNmH78D/yq2sQx+ic0E42/Y3lAS8tg=",
+                "bytesTransferredOut": 480
+            },
+            "requestID": "SWB6PM2XBF6S48RM",
+            "eventID": "617d13df-7fd0-43b5-9c08-cb69b3361ae1",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "432421738377",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::upraised-images"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "sharedEventID": "c54fd766-5418-4403-b4c1-3c10ab223e12",
+            "eventCategory": "Management"
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "AWSService",
+                "invokedBy": "cloudtrail.amazonaws.com"
+            },
+            "eventTime": "2024-02-26T19:10:40Z",
+            "eventSource": "kms.amazonaws.com",
+            "eventName": "GenerateDataKey",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "cloudtrail.amazonaws.com",
+            "userAgent": "cloudtrail.amazonaws.com",
+            "requestParameters": {
+                "keyId": "arn:aws:kms:ap-south-1:432421738377:key/35afa952-8b5f-45b6-b958-fc9b25b35af2",
+                "keySpec": "AES_256",
+                "encryptionContext": {
+                    "aws:cloudtrail:arn": "arn:aws:cloudtrail:ap-south-1:432421738377:trail/Test",
+                    "aws:s3:arn": "arn:aws:s3:::upraised-images/AWSLogs/432421738377/CloudTrail/ap-south-1/2024/02/26/432421738377_CloudTrail_ap-south-1_20240226T1910Z_8u17Gla07loW0MnK.json.gz"
+                }
+            },
+            "responseElements": null,
+            "requestID": "f2fd6c1d-0f33-408b-b126-ec64b15ce634",
+            "eventID": "bea163fd-f343-34ee-9024-6e92be7e9142",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "432421738377",
+                    "type": "AWS::KMS::Key",
+                    "ARN": "arn:aws:kms:ap-south-1:432421738377:key/35afa952-8b5f-45b6-b958-fc9b25b35af2"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "sharedEventID": "0d1c9dfd-113f-4195-b24e-23e960ea7b34",
+            "eventCategory": "Management"
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "AWSService",
+                "invokedBy": "dynamodb.application-autoscaling.amazonaws.com"
+            },
+            "eventTime": "2024-02-26T19:11:10Z",
+            "eventSource": "sts.amazonaws.com",
+            "eventName": "AssumeRole",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "dynamodb.application-autoscaling.amazonaws.com",
+            "userAgent": "dynamodb.application-autoscaling.amazonaws.com",
+            "requestParameters": {
+                "roleArn": "arn:aws:iam::432421738377:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+                "roleSessionName": "AutoScaling-RetrieveCurrentCapacity",
+                "durationSeconds": 900
+            },
+            "responseElements": {
+                "credentials": {
+                    "accessKeyId": "ASIAWJLSYC6E4IDKJSGZ",
+                    "sessionToken": "IQoJb3JpZ2luX2VjENv//////////wEaCmFwLXNvdXRoLTEiSDBGAiEAmUcYsOdOZ6tQoOXeaEwwVv27x8bUVfRLljo0IeF+yQgCIQD7iWXAlAv4QCuyNJHY6zeSgSkixs+hWxGQGrvTiLNknCqkAwjE//////////8BEAEaDDQzMjQyMTczODM3NyIMjyRtsGhuYKGXihXPKvgCcrtTFXTrr4gxaZSABgjxG9ptS58YNvRymIr9M4YUcYMu/Tf0UpNBuXu/YBqaxQ8IAg8HTa8Up7D3vJxqVcba3inoe/zwyXHrT+u75qHFxom8Wo0WxbLAiOkbyKTB9AA2jbhKIfE/yGc9wCDZEzlRP1CWUZ+STCrxeslAXxRzsGA215hQTXug/js09unt7+87glskb6kvTqwGZ1ZHpl8/u/hNBiLcIdDAv2x3ps8mllJvVVsPqfYf8BwBf7HlsUc7dUr7oJ2HPJQj+SVCFLBgOCCfTXzpM5KkDsIAgF3L/Js72X57jAsCaR7fLV/uWR5n+dJmonxcB82f5f3F1B9CywsmVt8TR44fjdpInkkanLv/jdS4vt1aWNX5iC+QJzBpf9JNUPvpF/x51SxsiNlwCEJCRFvg0Zc/bfxQnRbYcA6fyWm08hE0KEviaZZc8cpTGo3MH8otSBv1chyE7A9RLL1v/e8fRjjZGFzMrof4alxmsSh6gefhpjDOxPOuBjq9AZP3kvxRi+e9epTKYdu/v2dOiNM0laorX68VFxjy43ZkrCmUlnF8nwFOj7ebmMEPuJTfcNWz4DBy7djUM2/hw+DpxZpyECHzkk90qVovx5HBHUk0FZzA4YFrdKOVOZNLpHVg/LBwx7bKKIL/kOPLKGBf/kS3NgjcP/CFseRykB6AQKySmuZEVtlHfRTSnuxGS55daSUiHmFqEKjjhQ/AqYrXSEFSK0dIeZirWoK3UlZ0Y1nQP/XHATA00KQpWw==",
+                    "expiration": "Feb 26, 2024, 7:26:10 PM"
+                },
+                "assumedRoleUser": {
+                    "assumedRoleId": "AROAWJLSYC6EUPHMZZGMI:AutoScaling-RetrieveCurrentCapacity",
+                    "arn": "arn:aws:sts::432421738377:assumed-role/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable/AutoScaling-RetrieveCurrentCapacity"
+                }
+            },
+            "requestID": "184d6ab4-c308-4592-999f-d5e0a87a8ad2",
+            "eventID": "2bca140e-76d1-3cb9-ab51-de97197046c8",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "432421738377",
+                    "type": "AWS::IAM::Role",
+                    "ARN": "arn:aws:iam::432421738377:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "sharedEventID": "01aab811-5607-47f4-aa91-138f35f5c611",
+            "eventCategory": "Management"
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "AssumedRole",
+                "principalId": "AROAWJLSYC6EXNVJ7Q7WG:AutoScaling",
+                "arn": "arn:aws:sts::432421738377:assumed-role/AWSServiceRoleForAutoScaling/AutoScaling",
+                "accountId": "432421738377",
+                "sessionContext": {
+                    "sessionIssuer": {
+                        "type": "Role",
+                        "principalId": "AROAWJLSYC6EXNVJ7Q7WG",
+                        "arn": "arn:aws:iam::432421738377:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling",
+                        "accountId": "432421738377",
+                        "userName": "AWSServiceRoleForAutoScaling"
+                    },
+                    "attributes": {
+                        "creationDate": "2024-02-26T19:07:15Z",
+                        "mfaAuthenticated": "false"
+                    }
+                },
+                "invokedBy": "autoscaling.amazonaws.com"
+            },
+            "eventTime": "2024-02-26T19:11:16Z",
+            "eventSource": "ec2.amazonaws.com",
+            "eventName": "DescribeInstanceStatus",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "autoscaling.amazonaws.com",
+            "userAgent": "autoscaling.amazonaws.com",
+            "requestParameters": {
+                "instancesSet": {
+                    "items": [
+                        {
+                            "instanceId": "i-09ee05af899b4a892"
+                        },
+                        {
+                            "instanceId": "i-03a7ed28a3e3a4296"
+                        }
+                    ]
+                },
+                "filterSet": {},
+                "includeAllInstances": true
+            },
+            "responseElements": null,
+            "requestID": "f57e1d34-53a9-47fe-bdd8-ac67f70ea7a7",
+            "eventID": "cfdd51dc-91bb-467c-83d7-2ee544b78877",
+            "readOnly": true,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "eventCategory": "Management"
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "AssumedRole",
+                "principalId": "AROAWJLSYC6E2LXCO7RLX:i-09ee05af899b4a892",
+                "arn": "arn:aws:sts::432421738377:assumed-role/eksctl-upraised-cluster-nodegroup-NodeInstanceRole-YU8HU925LQJ5/i-09ee05af899b4a892",
+                "accountId": "432421738377",
+                "accessKeyId": "ASIAWJLSYC6EQSR2RZUI",
+                "sessionContext": {
+                    "sessionIssuer": {
+                        "type": "Role",
+                        "principalId": "AROAWJLSYC6E2LXCO7RLX",
+                        "arn": "arn:aws:iam::432421738377:role/eksctl-upraised-cluster-nodegroup-NodeInstanceRole-YU8HU925LQJ5",
+                        "accountId": "432421738377",
+                        "userName": "eksctl-upraised-cluster-nodegroup-NodeInstanceRole-YU8HU925LQJ5"
+                    },
+                    "webIdFederationData": {},
+                    "attributes": {
+                        "creationDate": "2024-02-26T18:06:05Z",
+                        "mfaAuthenticated": "false"
+                    },
+                    "ec2RoleDelivery": "2.0"
+                }
+            },
+            "eventTime": "2024-02-26T19:11:15Z",
+            "eventSource": "ssm.amazonaws.com",
+            "eventName": "UpdateInstanceInformation",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "3.110.144.181",
+            "userAgent": "aws-sdk-go/1.41.4 (go1.18.3; linux; amd64) amazon-ssm-agent/",
+            "requestParameters": {
+                "instanceId": "i-09ee05af899b4a892",
+                "agentVersion": "3.1.1732.0",
+                "agentStatus": "Active",
+                "platformType": "Linux",
+                "platformName": "Amazon Linux",
+                "platformVersion": "2",
+                "iPAddress": "192.168.20.193",
+                "computerName": "ip-192-168-20-193.ap-south-1.compute.internal",
+                "agentName": "amazon-ssm-agent"
+            },
+            "responseElements": null,
+            "requestID": "bd5c7a46-7693-4d0e-8de6-9e98dfeeaf14",
+            "eventID": "52c3e279-8464-4d51-b0cf-75fa45c62cbd",
+            "readOnly": false,
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "eventCategory": "Management",
+            "tlsDetails": {
+                "tlsVersion": "TLSv1.2",
+                "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+                "clientProvidedHostHeader": "ssm.ap-south-1.amazonaws.com"
+            }
+        },
+        {
+            "eventVersion": "1.09",
+            "userIdentity": {
+                "type": "AWSService",
+                "invokedBy": "cloudtrail.amazonaws.com"
+            },
+            "eventTime": "2024-02-26T19:11:38Z",
+            "eventSource": "s3.amazonaws.com",
+            "eventName": "GetBucketAcl",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "cloudtrail.amazonaws.com",
+            "userAgent": "cloudtrail.amazonaws.com",
+            "requestParameters": {
+                "bucketName": "upraised-images",
+                "Host": "upraised-images.s3.ap-south-1.amazonaws.com",
+                "acl": ""
+            },
+            "responseElements": null,
+            "additionalEventData": {
+                "SignatureVersion": "SigV4",
+                "CipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+                "bytesTransferredIn": 0,
+                "AuthenticationMethod": "AuthHeader",
+                "x-amz-id-2": "8ReZAQemjY/ZftN88ftcGfqUA7/ImtI5CY8c9Q33u0px/IaF8msWSq7cZy3ZMC6x1yk8t82Mxg4=",
+                "bytesTransferredOut": 480
+            },
+            "requestID": "0WA4NFMZMZQC2BQF",
+            "eventID": "b16228f4-9c62-4d0f-88f5-266018a6ed84",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "432421738377",
+                    "type": "AWS::S3::Bucket",
+                    "ARN": "arn:aws:s3:::upraised-images"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "sharedEventID": "74bdcd79-0ac9-4688-9bb5-6cc2b2e0cb09",
+            "eventCategory": "Management"
+        },
+        {
+            "eventVersion": "1.08",
+            "userIdentity": {
+                "type": "AWSService",
+                "invokedBy": "cloudtrail.amazonaws.com"
+            },
+            "eventTime": "2024-02-26T19:11:38Z",
+            "eventSource": "kms.amazonaws.com",
+            "eventName": "GenerateDataKey",
+            "awsRegion": "ap-south-1",
+            "sourceIPAddress": "cloudtrail.amazonaws.com",
+            "userAgent": "cloudtrail.amazonaws.com",
+            "requestParameters": {
+                "keySpec": "AES_256",
+                "encryptionContext": {
+                    "aws:cloudtrail:arn": "arn:aws:cloudtrail:ap-south-1:432421738377:trail/Test",
+                    "aws:s3:arn": "arn:aws:s3:::upraised-images/AWSLogs/432421738377/CloudTrail/ap-south-1/2024/02/26/432421738377_CloudTrail_ap-south-1_20240226T1915Z_KQI96xYXbSwFzqXU.json.gz"
+                },
+                "keyId": "arn:aws:kms:ap-south-1:432421738377:key/35afa952-8b5f-45b6-b958-fc9b25b35af2"
+            },
+            "responseElements": null,
+            "requestID": "948947b8-0ffa-4be5-8c1f-0602f60c6b4f",
+            "eventID": "5744564a-3cd9-33df-b790-254ff1cc8488",
+            "readOnly": true,
+            "resources": [
+                {
+                    "accountId": "432421738377",
+                    "type": "AWS::KMS::Key",
+                    "ARN": "arn:aws:kms:ap-south-1:432421738377:key/35afa952-8b5f-45b6-b958-fc9b25b35af2"
+                }
+            ],
+            "eventType": "AwsApiCall",
+            "managementEvent": true,
+            "recipientAccountId": "432421738377",
+            "sharedEventID": "4e54c8b8-e1ba-4625-a07b-eb989887827b",
+            "eventCategory": "Management"
+        }
+    ]
+}
