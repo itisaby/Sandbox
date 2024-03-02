@@ -57,14 +57,14 @@ function getRandomSlug() {
 
 /** Component */
 export const Landing = () => {
-    const [language, setLanguage] = useState("node-js");
+    const [language, setLanguage] = useState("node");
     const [replId, setReplId] = useState(getRandomSlug());
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     return (
       <Container>
-        <Title>Lepl lit</Title>
+        <Title>Upraised Sandbox</Title>
         <StyledInput
           onChange={(e) => setReplId(e.target.value)}
           type="text"

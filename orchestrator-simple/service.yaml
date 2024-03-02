@@ -23,33 +23,40 @@ spec:
           command: ["/bin/sh", "-c"]
           args:
             - >
-              aws s3 cp s3://repl/code/service_name/ /workspace/ --recursive &&
+              aws s3 cp s3://upraisedsandbox/code/service_name/ /workspace/ --recursive &&
               echo "Resources copied from S3";
           env:
             - name: AWS_ACCESS_KEY_ID
-              value: "your_aws_key_id"
+              value: "AKIAWJLSYC6E63JMIE43"
             - name: AWS_SECRET_ACCESS_KEY
-              value: "your_aws_secret"
+              value: "81cF3aak8JvtwNBV95r8wVx+C67r+yynKF9nsKxL"
           volumeMounts:
             - name: workspace-volume
               mountPath: /workspace
       containers:
         - name: runner
-          image: 100xdevs/runner:latest
+          image: public.ecr.aws/v0c8x1b5/socket:latest
           ports:
             - containerPort: 3001
             - containerPort: 3000
+          env:
+            - name: AWS_ACCESS_KEY_ID
+              value: "AKIAWJLSYC6E63JMIE43"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "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"
           volumeMounts:
             - name: workspace-volume
               mountPath: /workspace
           resources:
             # Bounty $25 Use ephemeral-storage to add space limits here
             requests:
-              cpu: "1"
+              # cpu: "1"
               memory: "1Gi"
+              ephemeral-storage: "1Gi"
             limits:
-              cpu: "1"
+              # cpu: "1"
               memory: "1Gi"
+              ephemeral-storage: "2Gi"
 
 ---
 apiVersion: v1
@@ -76,7 +83,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: service_name.peetcode.com
+  - host: service_name.sandbox.upraised.in
     http:
       paths:
       - path: /
@@ -86,7 +93,7 @@ spec:
             name: service_name
             port:
               number: 3001
-  - host: service_name.autogpt-cloud.com
+  - host: service_name.box.upraised.in
     http:
       paths:
       - path: /
@@ -96,3 +103,4 @@ spec:
             name: service_name
             port:
               number: 3000 
+

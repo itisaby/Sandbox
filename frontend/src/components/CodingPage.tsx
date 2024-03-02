@@ -12,7 +12,7 @@ function useSocket(replId: string) {
     const [socket, setSocket] = useState<Socket | null>(null);
 
     useEffect(() => {
-        const newSocket = io(`ws://${replId}.peetcode.com`);
+        const newSocket = io(`ws://${replId}.sandbox.upraised.in`);
         setSocket(newSocket);
 
         return () => {

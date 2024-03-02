@@ -5,11 +5,12 @@ import path from "path";
 const s3 = new S3({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-    endpoint: process.env.S3_ENDPOINT
+    // endpoint: process.env.S3_ENDPOINT
+    region: 'ap-south-1'
 })
 export const fetchS3Folder = async (key: string, localPath: string): Promise<void> => {
     const params = {
-        Bucket: process.env.S3_BUCKET ?? "",
+        Bucket: process.env.S3_BUCKET ?? "upraisedsandbox",
         Prefix: key
     }
 
@@ -19,7 +20,7 @@ export const fetchS3Folder = async (key: string, localPath: string): Promise<voi
             const fileKey = file.Key
             if (fileKey) {
                 const params = {
-                    Bucket: process.env.S3_BUCKET ?? "",
+                    Bucket: process.env.S3_BUCKET ?? "upraisedsandbox",
                     Key: fileKey
                 }
                 const data = await s3.getObject(params).promise()
@@ -38,7 +39,7 @@ export async function copyS3Folder(sourcePrefix: string, destinationPrefix: stri
     try {
         // List all objects in the source folder
         const listParams = {
-            Bucket: process.env.S3_BUCKET ?? "",
+            Bucket: process.env.S3_BUCKET ?? "upraisedsandbox",
             Prefix: sourcePrefix,
             ContinuationToken: continuationToken
         };
@@ -99,7 +100,7 @@ function createFolder(dirName: string) {
 
 export const saveToS3 = async (key: string, filePath: string, content: string): Promise<void> => {
     const params = {
-        Bucket: process.env.S3_BUCKET ?? "",
+        Bucket: process.env.S3_BUCKET ?? "upraisedsandbox",
         Key: `${key}${filePath}`,
         Body: content
     }
