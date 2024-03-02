@@ -79,6 +79,7 @@ export const Landing = () => {
           <option value="node">Node.js</option>
           <option value="python">Python</option>
           <option value="react">React</option>
+          <option value="next">Next.js</option>
         </StyledSelect>
         <StyledButton disabled={loading} onClick={async () => {
           setLoading(true);
