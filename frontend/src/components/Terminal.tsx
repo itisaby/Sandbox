@@ -17,7 +17,7 @@ const OPTIONS_TERM = {
         background: "black"
     }
 };
-export const TerminalComponent = ({ socket }: {socket: Socket}) => {
+export const TerminalComponent = ({ socket }: { socket: Socket }) => {
     const terminalRef = useRef();
 
     useEffect(() => {
@@ -53,7 +53,7 @@ export const TerminalComponent = ({ socket }: {socket: Socket}) => {
         }
     }, [terminalRef]);
 
-    return <div style={{width: "40vw", height: "400px", textAlign: "left"}} ref={terminalRef}>
-        
+    return <div style={{ width: "40vw", height: "400px", textAlign: "left" }} ref={terminalRef}>
+
     </div>
 }
