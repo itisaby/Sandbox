@@ -10,14 +10,14 @@ app.use(cors())
 
 app.post("/project", async (req, res) => {
     // Hit a database to ensure this slug isn't taken already
-    const { replId, language } = req.body;
+    const { assignmentId, language } = req.body;
 
-    if (!replId) {
+    if (!assignmentId) {
         res.status(400).send("Bad request");
         return;
     }
 
-    await copyS3Folder(`base/${language}`, `code/${replId}`);
+    await copyS3Folder(`base/${language}`, `code/${assignmentId}`);
 
     res.send("Project created");
 });

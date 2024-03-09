@@ -58,7 +58,7 @@ function getRandomSlug() {
 /** Component */
 export const Landing = () => {
     const [language, setLanguage] = useState("node");
-    const [replId, setReplId] = useState(getRandomSlug());
+    const [assignmentId, setassignmentId] = useState(getRandomSlug());
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
@@ -66,10 +66,10 @@ export const Landing = () => {
       <Container>
         <Title>Upraised Sandbox</Title>
         <StyledInput
-          onChange={(e) => setReplId(e.target.value)}
+          onChange={(e) => setassignmentId(e.target.value)}
           type="text"
           placeholder="Repl ID"
-          value={replId}
+          value={assignmentId}
         />
         <StyledSelect
           name="language"
@@ -88,9 +88,9 @@ export const Landing = () => {
         </StyledSelect>
         <StyledButton disabled={loading} onClick={async () => {
           setLoading(true);
-          await axios.post(`${SERVICE_URL}/project`, { replId, language });
+          await axios.post(`${SERVICE_URL}/project`, { assignmentId, language });
           setLoading(false);
-          navigate(`/coding/?replId=${replId}`)
+          navigate(`/coding/?assignmentId=${assignmentId}`)
         }}>{loading ? "Starting ..." : "Start Coding"}</StyledButton>
       </Container>
     );

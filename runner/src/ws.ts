@@ -18,9 +18,9 @@ export function initWs(httpServer: HttpServer) {
     io.on("connection", async (socket) => {
         const host = socket.handshake.headers.host;
         console.log(`host is ${host}`);
-        const replId = host?.split('.')[0];
+        const assignmentId = host?.split('.')[0];
     
-        if (!replId) {
+        if (!assignmentId) {
             socket.disconnect();
             terminalManager.clear(socket.id);
             return;
@@ -30,11 +30,11 @@ export function initWs(httpServer: HttpServer) {
             rootContent: await fetchDir("/workspace", "")
         });
 
-        initHandlers(socket, replId);
+        initHandlers(socket, assignmentId);
     });
 }
 
-function initHandlers(socket: Socket, replId: string) {
+function initHandlers(socket: Socket, assignmentId: string) {
 
     socket.on("disconnect", () => {
         console.log("user disconnected");
@@ -55,11 +55,11 @@ function initHandlers(socket: Socket, replId: string) {
     socket.on("updateContent", async ({ path: filePath, content }: { path: string, content: string }) => {
         const fullPath =  `/workspace/${filePath}`;
         await saveFile(fullPath, content);
-        await saveToS3(`code/${replId}`, filePath, content);
+        await saveToS3(`code/${assignmentId}`, filePath, content);
     });
 
     socket.on("requestTerminal", async () => {
-        terminalManager.createPty(socket.id, replId, (data, id) => {
+        terminalManager.createPty(socket.id, assignmentId, (data, id) => {
             socket.emit('terminal', {
                 data: Buffer.from(data,"utf-8")
             });

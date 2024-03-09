@@ -5,13 +5,13 @@ import path from "path";
 const SHELL = "bash";
 
 export class TerminalManager {
-    private sessions: { [id: string]: {terminal: IPty, replId: string;} } = {};
+    private sessions: { [id: string]: {terminal: IPty, assignmentId: string;} } = {};
 
     constructor() {
         this.sessions = {};
     }
     
-    createPty(id: string, replId: string, onData: (data: string, id: number) => void) {
+    createPty(id: string, assignmentId: string, onData: (data: string, id: number) => void) {
         let term = fork(SHELL, [], {
             cols: 100,
             name: 'xterm',
@@ -21,7 +21,7 @@ export class TerminalManager {
         term.on('data', (data: string) => onData(data, term.pid));
         this.sessions[id] = {
             terminal: term,
-            replId
+            assignmentId
         };
         term.on('exit', () => {
             delete this.sessions[term.pid];

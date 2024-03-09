@@ -8,17 +8,17 @@ import { Output } from './Output';
 import { TerminalComponent as Terminal } from './Terminal';
 import axios from 'axios';
 
-function useSocket(replId: string) {
+function useSocket(assignmentId: string) {
     const [socket, setSocket] = useState<Socket | null>(null);
 
     useEffect(() => {
-        const newSocket = io(`ws://${replId}.sandbox.upraised.in`);
+        const newSocket = io(`ws://${assignmentId}.sandbox.upraised.in`);
         setSocket(newSocket);
 
         return () => {
             newSocket.disconnect();
         };
-    }, [replId]);
+    }, [assignmentId]);
 
     return socket;
 }
@@ -56,11 +56,11 @@ const RightPanel = styled.div`
 export const CodingPage = () => {
     const [podCreated, setPodCreated] = useState(false);
     const [searchParams] = useSearchParams();
-    const replId = searchParams.get('replId') ?? '';
+    const assignmentId = searchParams.get('assignmentId') ?? '';
     
     useEffect(() => {
-        if (replId) {
-            axios.post(`http://localhost:3002/start`, { replId })
+        if (assignmentId) {
+            axios.post(`http://localhost:3002/start`, { assignmentId })
                 .then(() => setPodCreated(true))
                 .catch((err) => console.error(err));
         }
@@ -75,9 +75,9 @@ export const CodingPage = () => {
 
 export const CodingPagePostPodCreation = () => {
     const [searchParams] = useSearchParams();
-    const replId = searchParams.get('replId') ?? '';
+    const assignmentId = searchParams.get('assignmentId') ?? '';
     const [loaded, setLoaded] = useState(false);
-    const socket = useSocket(replId);
+    const socket = useSocket(assignmentId);
     const [fileStructure, setFileStructure] = useState<RemoteFile[]>([]);
     const [selectedFile, setSelectedFile] = useState<File | undefined>(undefined);
     const [showOutput, setShowOutput] = useState(false);
