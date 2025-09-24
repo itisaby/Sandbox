@@ -1,4 +1,4 @@
-# 🚀 Sandbox - Cloud Native Code Execution Platform
+# 🚀 Sandbox - Cloud Native Sandbox
 
 A browser-based sandbox platform similar to Replit, built with Kubernetes and AWS for scalable, isolated code execution environments. Experience seamless coding with real-time collaboration, terminal access, and multi-language support.
 
